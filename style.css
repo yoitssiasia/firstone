@@ -1,0 +1,130 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    display: grid;
+    grid-template-areas: "menuBar displayBody";
+    grid-template-columns: 1fr 4fr;
+    background-color: #f2f2f0;
+}
+p,
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.3vw;
+}
+
+#menuBar {
+    grid-area: menuBar;
+    box-sizing: border-box;
+    height: 100%;
+    width: fit-content;
+    margin-left: 2%;
+
+    z-index: 999999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#menuBar__navigationMenu {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navMenuButton {
+    position: relative;
+    width: auto;
+
+    border: 0;
+    background-color: transparent;
+    margin-top: 15%;
+
+    font-size: 1.3rem;
+    font-weight: 100;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.3vw;
+    white-space: nowrap;
+}
+
+#menuBar__navigationMenu__item4__button {
+    margin-bottom: 15%;
+}
+
+#menuBar__landingPageButton {
+    height: 5vh;
+    aspect-ratio: 1/1;
+    margin-bottom: 20%;
+}
+
+.fullPageDiv{
+    box-sizing: border-box;
+}
+/*=========*/
+#landingPage {
+    z-index: 1;
+    grid-area: displayBody;
+    height: 100%;
+    width: 100%;
+}
+
+#landingPage__display {
+    height: 100%;
+}
+#landingPage__display__hello{
+    padding: 0;
+    margin: 0;
+
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20vh;
+    margin-right: 10vw;
+}
+#landingPage__display__name{
+    padding: 0;
+    margin: 0;
+
+    font-weight: 200;
+    font-size: 9rem;
+    text-align: right;
+    margin-right: 10vw;
+}
+/*=========*/
+#displayBody {
+    display: none;
+    grid-template-areas: ". displayDiv";
+    grid-template-columns: 1fr 4fr;
+
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    transition: 1s transform ease;
+    background-color: bisque;
+
+    z-index: 2;
+}
+.displayDiv{
+    grid-area: displayDiv;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tempParagraph{
+    text-align: center;
+    line-height: 3rem;
+}
